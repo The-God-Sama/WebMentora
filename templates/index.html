@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script defer src="/static/script.js"></script>
+</head>
+
+<body>
+    <h2 id="Username_space">Username</h2>
+    <input type="text" name="Username" id="Username">
+    <button id="setname">Set name</button>
+    <h2>Select a Room</h2>
+    <ul id="room-box">
+        <li></li><button id="room1" onclick="room_join('HOME')">HOME</button></li>
+    </ul>
+    <input type="text" name="" id="addroomname">
+    <button id="newroom">NewRoom</button>
+    <button id="refresh_bt" onclick="refresh()">refresh</button>
+    <h2>Chat</h2>
+    <div id="chat"></div>
+    <input type="text" id="message" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+</body>
+
+</html>
